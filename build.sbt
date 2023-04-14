@@ -15,7 +15,7 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-stream" % "2.8.0",
 
   "com.github.scredis" %% "scredis" % "2.4.3",
-  "net.debasishg" %% "redisclient" % "3.42",
+  "org.mongodb.scala" %% "mongo-scala-driver" % "4.9.1",
 
   "org.scalatest" %% "scalatest" % "3.2.15",
   "io.aeron" % "aeron-driver" % "1.40.0",

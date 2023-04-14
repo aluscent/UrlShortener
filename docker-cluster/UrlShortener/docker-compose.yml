@@ -1,15 +1,17 @@
 services:
+
   cache:
     image: redis:latest
     restart: always
     ports:
       - '6379:6379'
     command: redis-server --save 20 1 --loglevel warning --requirepass eYVX7EwV
+
   database:
-    image: bitnami/postgresql:latest
+    image: mongo
+    restart: always
     ports:
-      - '5432:5432'
+      - '27017:27017'
     environment:
-      - POSTGRESQL_USERNAME=root
-      - POSTGRESQL_PASSWORD=eYVX7EwV
-      - POSTGRESQL_DATABASE=root
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
